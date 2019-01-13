@@ -3,6 +3,8 @@ import Expo, { AppLoading } from "expo";
 
 // Component
 import HomePage from "./Components/HomePage";
+import CoffeeList from "./Components/CoffeeList";
+import CoffeeDetail from "./Components/CoffeeDetail";
 
 class App extends React.Component {
   constructor() {
@@ -16,7 +18,9 @@ class App extends React.Component {
     Expo.Font.loadAsync({
       Roboto: require("native-base/Fonts/Roboto.ttf"),
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-    }).then(() => this.setState({ fontsAreLoaded: true }));
+    })
+      .then(() => this.setState({ fontsAreLoaded: true }))
+      .catch(err => console.error("SOMETHING WENT HORRIBLY WRONG"));
   }
 
   render() {
