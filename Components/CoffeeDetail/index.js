@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { observer } from "mobx-react";
-
 // NativeBase Components
 import {
   Thumbnail,
@@ -63,7 +62,7 @@ class CoffeeDetail extends Component {
             </Left>
             <Body />
             <Right>
-              <Thumbnail bordered source={coffeeshop.img} />
+              <Thumbnail bordered source={{ uri: coffeeshop.img }} />
             </Right>
           </ListItem>
           <ListItem style={{ borderBottomWidth: 0 }}>
